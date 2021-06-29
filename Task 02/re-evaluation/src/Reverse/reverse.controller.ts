@@ -9,8 +9,8 @@ export class ReverseController {
   @Get('reverse')
     reverseNumber(@Query() query){
       
-      var reversenum = this.reverseService.getreverseNumber(query.num)
-        return reversenum
+      const reversenum = this.reverseService.getreverseNumber(query.num)
+      return reversenum
     }
 
   

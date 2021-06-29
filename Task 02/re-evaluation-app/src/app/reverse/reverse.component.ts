@@ -19,7 +19,7 @@ export class ReverseComponent implements OnInit {
   async getReverse(number:number){
     this.enterNumber = number
     
-    var respoence = await this.http.get(`${environment.apiUrl}/reverse/?num=${this.enterNumber}`).toPromise();
+    const respoence = await this.http.get(`${environment.apiUrl}/reverse/?num=${this.enterNumber}`).toPromise();
     this.reverseNumber = respoence
   }
 

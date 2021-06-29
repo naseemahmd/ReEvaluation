@@ -1,29 +1,17 @@
-const {Tree} = require('./createATree')
-let tree = new Tree();
-for(var i = 0; i< 25;i++){
-    var random = Math.floor(Math.random() * 40) + 1
-    
-    if(number.length == 0){
-        number.push(random);
-        tree.newNode(random);
-    }else{
-        if(!number.includes(random)){
-            number.push(random);
-            tree.newNode(random);
-        }
+const preOrder = (node) => {
+    let arr = new Array();
+    if (node != null) {
+        getPreOrder(node, arr);
+        return arr;
     }
-}
+};
 
+const getPreOrder = (node, arr) => {
+    if (node != null) {
+        arr.push(node.value);
+        node.left && getPreOrder(node.left, arr);
+        node.right && getPreOrder(node.right, arr);
+    }
+};
 
-var value = []
-function preOrder(tree) {
-    value.push(tree.value)
-    tree.right && preOrder(tree.left)
-    tree.left && preOrder(tree.right)
-   
-    
-}
-
-preOrder(tree.treeRoot)
-
-console.log(value);
+module.exports = {preOrder}

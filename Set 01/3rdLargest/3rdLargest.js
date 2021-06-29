@@ -2,7 +2,7 @@
 
 function find3rdLargest(numberArr) {
     numberArr.sort((a,b) => {return a-b});
-    console.log("3rd Max", numberArr[numberArr.length - 3]);
+   return numberArr[numberArr.length - 3]
 }
 
-find3rdLargest([23,21,56,44,72,90,34])
+module.exports = {find3rdLargest}

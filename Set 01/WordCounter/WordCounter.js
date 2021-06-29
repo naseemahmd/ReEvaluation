@@ -2,13 +2,13 @@
 
 function countWords(wordToCount) {
 
-    var wordArr = [...wordToCount.toLowerCase()];
-    var wordCount = []
-    var count = 0
-    var word
-    for(var i =0;i < wordArr.length;i++){
+    const wordArr = [...wordToCount.toLowerCase()];
+    const wordCount = []
+    let count = 0
+    let word
+    for(let i =0;i < wordArr.length;i++){
         
-        for(var j =0; j  < wordArr.length; j++){
+        for(let j =0; j  < wordArr.length; j++){
             if(wordArr[i] === wordArr[j]){
                 
                 count += 1   
@@ -25,7 +25,7 @@ function countWords(wordToCount) {
         word = ''
         count = 0
     }
-    console.log("The Word Count is",wordCount);
+    return wordCount
 }
 
-countWords('apple')
+module.exports = {countWords}
