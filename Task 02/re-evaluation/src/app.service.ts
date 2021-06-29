@@ -6,17 +6,15 @@ export class AppService {
     return 'Hello World!';
   }
 
-  getreverseNumber(number:Number) : Number {
-
-    var revease =''
-    var numarr = [...number.toString()]
-    for(var i = numarr.length -1; i >= 0;i--){
-        revease = `${revease}${numarr[i]}`
+  getreverseNumber(number: number): number {
+    let revease = '';
+    const numArr = [...number.toString()];
+    for (let i = numArr.length - 1; i >= 0; i--) {
+      revease = `${revease}${numArr[i]}`;
     }
-    
-    var num = parseInt(`${revease}`)
- 
 
-    return num
+    const num = parseInt(`${revease}`);
+
+    return num;
   }
 }

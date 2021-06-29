@@ -13,13 +13,14 @@ function missingNumber(nummbers){
                 for(var j = 1; j < count;j++){
                     missingNum.push( nummbers[i] + j ); 
                 }
-                //missingNum.push( nummbers[i] + 1 );   
+                
             }          
         }
     }
     
     console.log(missingNum);
 }
+/* Finding the Missing the Number from Squeance when know the range */
 
 function missingNumberRange(nummbers){
     
@@ -33,7 +34,7 @@ function missingNumberRange(nummbers){
                 for(var j = 1; j < count;j++){
                     missingNum.push( nummbers[i] + j ); 
                 }
-                //missingNum.push( nummbers[i] + 1 );   
+                 
             }          
         }
     }
@@ -43,7 +44,6 @@ function missingNumberRange(nummbers){
             nummbers.sort((a,b) =>{return a-b});
            
             if(range - nummbers.length=== 2){
-                console.log("herer");
                 missingNum.push( nummbers[0] -1 );
                 missingNum.push( nummbers[nummbers.length-1] +1 );
             }
@@ -68,7 +68,7 @@ function missingNumberRange(nummbers){
         }
     
 
-    console.log(missingNum);
+    console.log("Missing Numbers are", missingNum);
 }
 
 missingNumberRange(number)

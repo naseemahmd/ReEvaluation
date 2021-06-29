@@ -17,8 +17,6 @@ function countWords(wordToCount) {
 
         }
        
-    
-        
         if(!wordCount.includes(`${wordArr[i]} - ${count}`)){
             wordCount.push(`${wordArr[i]} - ${count}`);
         }
@@ -27,7 +25,7 @@ function countWords(wordToCount) {
         word = ''
         count = 0
     }
-    console.log(wordCount);
+    console.log("The Word Count is",wordCount);
 }
 
 countWords('apple')

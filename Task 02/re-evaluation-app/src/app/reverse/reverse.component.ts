@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ThisReceiver, ThrowStmt } from '@angular/compiler';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-reverse',
@@ -9,7 +10,7 @@ import { ThisReceiver, ThrowStmt } from '@angular/compiler';
 })
 export class ReverseComponent implements OnInit {
   enterNumber = 0;
-  reverseNumber;
+  reverseNumber=null;
   constructor(private http: HttpClient,) { }
 
   ngOnInit(): void {
@@ -18,8 +19,8 @@ export class ReverseComponent implements OnInit {
   async getReverse(number:number){
     this.enterNumber = number
     
-    var res = await this.http.get(`http://localhost:3015/reverse/?num=${this.enterNumber}`).toPromise();
-    this.reverseNumber = res
+    var respoence = await this.http.get(`${environment.apiUrl}/reverse/?num=${this.enterNumber}`).toPromise();
+    this.reverseNumber = respoence
   }
 
 }

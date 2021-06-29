@@ -11,7 +11,6 @@ export class AppComponent {
   constructor(private router: Router) { }
 
   goToPage(pageName:string){
-    console.log(pageName,"777");
     this.router.navigate([`./${pageName}`]);
     }
 }
